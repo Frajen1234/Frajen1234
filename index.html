@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - Rahul Weds Manasa</title>
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    overflow-x: hidden; /* To prevent horizontal scroll due to animations */
+    position: relative;
+}
+
+/* Floating heart animations */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff6b6b;
+    clip-path: polygon(50% 0%, 0% 38%, 20% 100%, 50% 75%, 80% 100%, 100% 38%);
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.heart:nth-child(2) {
+    left: 15%;
+    animation-duration: 4s;
+}
+
+.heart:nth-child(3) {
+    left: 30%;
+    animation-duration: 5s;
+}
+
+.heart:nth-child(4) {
+    left: 45%;
+    animation-duration: 3.5s;
+}
+
+.heart:nth-child(5) {
+    left: 60%;
+    animation-duration: 4.5s;
+}
+
+.heart:nth-child(6) {
+    left: 75%;
+    animation-duration: 6s;
+}
+
+.hero {
+    background: none; /* Remove background image to show gradient */
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video video {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    animation: fadeInUp 2s ease-in-out 1s;
+    /* Delay animation by 1 second for the subtext */
+}
+
+/* Add a slight glow effect to the text */
+.hero h1, .hero p {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+/* General Styles */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    overflow-x: hidden; /* To prevent horizontal scroll due to animations */
+    position: relative;
+}
+
+/* Hero Section - Heading (Bride & Groom Names) */
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    animation: fadeInUp 2s ease-in-out;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.hero p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    animation: fadeInUp 2s ease-in-out 1s;
+    color: #fff;
+    margin: 0;
+}
+
+/* Subtle Glow Effect */
+.hero h1, .hero p {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Section Titles */
+section h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Body Text */
+section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Gallery Image Styles */
+.gallery-container img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video Styles */
+.video video {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Map Section */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(255, 183, 197, 0.8), rgba(255, 240, 186, 0.8));
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('floral-pattern.png'); /* Add a subtle floral pattern image */
+    background-size: cover;
+    opacity: 0.3; /* Control the visibility of the pattern */
+    z-index: 1;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text contrast */
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2; /* Ensure the overlay is above the background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    animation: fadeInUp 2s ease-in-out;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glowing effect */
+    margin: 0;
+    z-index: 3;
+}
+
+.hero p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    animation: fadeInUp 2s ease-in-out 1s;
+    color: #fff;
+    margin: 0;
+    z-index: 3;
+}
+
+.hero {
+    background: linear-gradient(135deg, #ffb7c5, #ffdab9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('floral-pattern.png');
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.gallery {
+    background-image: url('romantic-bg.jpg'); /* Use a romantic image like soft-focus flowers or sunset */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.video-section {
+    background-color: #f7d7e8; /* Light pink or romantic color */
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6b6b;
+    clip-path: polygon(50% 0%, 0% 38%, 20% 100%, 50% 75%, 80% 100%, 100% 38%);
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+.heart:nth-child(2) { left: 20%; animation-duration: 7s; }
+.heart:nth-child(3) { left: 40%; animation-duration: 5s; }
+.heart:nth-child(4) { left: 60%; animation-duration: 9s; }
+.heart:nth-child(5) { left: 80%; animation-duration: 6s; }
+
+.map-section {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: particleAnimation 10s linear infinite;
+}
+
+@keyframes particleAnimation {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    100% { transform: translateY(-500px) translateX(200px); opacity: 0; }
+}
+
+.particle:nth-child(2) { left: 15%; animation-duration: 12s; }
+.particle:nth-child(3) { left: 30%; animation-duration: 8s; }
+.particle:nth-child(4) { left: 45%; animation-duration: 10s; }
+.particle:nth-child(5) { left: 60%; animation-duration: 15s; }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 40s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-image: url('romantic-scenery1.jpg'); }
+    25% { background-image: url('romantic-scenery2.jpg'); }
+    50% { background-image: url('romantic-scenery3.jpg'); }
+    75% { background-image: url('romantic-scenery4.jpg'); }
+    100% { background-image: url('romantic-scenery1.jpg'); }
+}
+
+.hero, .gallery, .video-section, .map-section {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero h1, .hero p, .gallery h2, .video-section h2, .map-section h2 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.details {
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Light background for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align text to the left */
+    color: #333; /* Text color */
+}
+
+.details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.details-item {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out label and value */
+    margin-bottom: 10px; /* Space between each detail */
+}
+
+.label {
+    font-weight: bold; /* Make the label bold */
+    width: 30%; /* Set width for the label to maintain alignment */
+}
+
+.value {
+    width: 70%; /* Set width for the value */
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('your-background-image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the image */
+    filter: blur(8px); /* Initial blur */
+    transition: filter 0.5s ease; /* Quick transition */
+}
+
+.hero:hover {
+    filter: blur(0); /* Remove blur on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Place on top of the background */
+    color: white; /* Text color */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Adjust size as needed */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('headerbg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the image */
+    filter: blur(8px); /* Initial blur */
+    transition: filter 0.5s ease; /* Quick transition */
+}
+
+.our-story {
+    position: relative;
+    height: 100vh; /* Full viewport height or adjust as needed */
+    background-image: url('weddinginvitationbg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    padding: 50px; /* Adjust padding as needed */
+}
+
+.our-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Light overlay for better text visibility */
+    z-index: 1; /* Place behind the text */
+}
+
+.our-story h2 {
+    position: relative; /* Position relative to place text above overlay */
+    z-index: 2; /* Place on top of the overlay */
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: black; /* Set text color to black */
+}
+
+.our-story p {
+    position: relative; /* Position relative to place text above overlay */
+    z-index: 2; /* Place on top of the overlay */
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: black; /* Set text color to black */
+    text-align: center;
+}
+
+.gallery {
+    position: relative;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center; /* Center the text */
+    background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.gallery h2 {
+    color: white; /* Change the heading color */
+    font-size: 2.5rem; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.gallery-container {
+    display: inline-block; /* Align images horizontally */
+    width: 50%; /* Set to 50% of the container width */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Position for animation */
+}
+
+.gallery-container img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth scaling effect */
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+/* Optional Flow Animation */
+@keyframes flow-animation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+.gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('gallerybg.jpg'); /* Replace with your flow animation image */
+    background-size: cover;
+    animation: flow-animation 10s linear infinite; /* Adjust duration and type as needed */
+    z-index: 0; /* Place behind the text and images */
+}
+
+.gallery-container {
+    position: relative;
+    z-index: 1; /* Place images above the background animation */
+}
+
+.video {
+    position: relative;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center; /* Center the text */
+    color: white; /* Text color */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.video h2 {
+    font-size: 2.5rem; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.video video {
+    width: 80%; /* Set width of the video */
+    max-width: 800px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.video video:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Background Blur Animation */
+@keyframes background-animation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('videobg.jpg'); /* Replace with your animated background image */
+    background-size: cover;
+    animation: background-animation 10s linear infinite; /* Adjust duration and type as needed */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: 0; /* Place behind the text and video */
+}
+
+.video {
+    position: relative;
+    z-index: 1; /* Place text and video above the background */
+}
+    </style>
+</head>
+<body>
+   <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <header class="hero">
+        <div class="overlay">
+            <h1>Rahul<h1><b></b></h1><h1>Weds</h1><h1>Manasa</h1>
+            <p>We're getting married!</p>
+            <p>August 28, 2024</p>
+        </div>
+    </header>
+
+    <section class="our-story">
+        <br>
+        <br>
+        <h2>Wedding Invitation</h2>
+        <p>We Solicit your gracious presence with your family & friends on the auspicious occation of the marriage of our son (Grand Son of Late Vunnam Malakondaiah Late Ramulamma)</p>
+        <p>Chi. Rahul, M.Tech.,</p><p>with</p> <p>Chi.la.sow. Manasa, M.C.A.,</p><p> (Dauthter of Sri Puchakayala Srinivasulu, Smt. Vijayakumari of Surveyreddypalme (V), Ongole Mandal)</p>
+        <!-- Add more story content here -->
+    </section>
+
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://drive.google.com/uc?export=view&id=1-fag5uW16wTeKlLqqChdgPmpz9qpTEo4" alt="Bride">
+            <!-- Add more images here -->
+        </div>
+        <br>
+        <div class="gallery-container">
+            <img src="groom.jpg" alt="Groom">
+            <!-- Add more images here -->
+        </div>
+    </section>
+
+    <section class="video">
+        <h2>Our Journey</h2>
+        <video controls>
+            <source src="wedding-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+   <section class="details">
+    <h2>Wedding Details</h2>
+    <div class="details-item">
+        <span class="label">Date:</span>
+        <span class="value">August 28, 2024</span>
+    </div>
+    <div class="details-item">
+        <span class="label">Time:</span>
+        <span class="value">7:41 PM</span>
+    </div>
+    <div class="details-item">
+        <span class="label">Venue:</span>
+        <span class="value">Sri Batchala Balayya Kalyanamandapam Railway Station Road, Ongole</span>
+    </div>
+    <div id="map"></div>
+</section>
+
+
+
+    <footer>
+    </footer>
+
+    <!--<script src="script.js"></script>-->
+    <<script>
+      function initMap() {
+    // The location of the wedding venue
+    const venueLocation = { lat: 15.4973312, lng: 80.0550865 };
+    // The map, centered at the venue location
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: venueLocation,
+    });
+    // The marker, positioned at the venue location
+    const marker = new google.maps.Marker({
+        position: venueLocation,
+        map: map,
+    });
+}
+
+// Load the Google Maps API
+const script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=&callback=initMap`;
+script.async = true;
+document.head.appendChild(script);
+    </script>
+</body>
+</html>
